@@ -1,0 +1,28 @@
+class ArrayStructure {
+  constructor(size) {
+    this.size = size;
+    this.array = new Array(size).fill(null);
+  }
+
+  insert(index, value) {
+    if (index < 0 || index >= this.size) {
+      console.log('Index out of bounds');
+      return;
+    }
+    this.array[index] = value;
+  }
+
+  remove(index) {
+    if (index < 0 || index >= this.size) {
+      console.log('Index out of bounds');
+      return;
+    }
+    this.array[index] = null;
+  }
+
+  display() {
+    console.log(this.array);
+  }
+}
+
+module.exports = ArrayStructure;
